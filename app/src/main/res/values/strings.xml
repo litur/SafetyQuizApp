@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="enter_your_name_here">Enter your name here</string>
+
+    <string name="enter_company_name">Company</string>
+    <string name="write_your_answer_here">Write your answer here</string>
+
+
+    <!-- Questions and answers -->
+    <string name="question_1_text">What are the main hazards you can find in the areas marked with the orange line on the ground?</string>
+    <string name="answer_1A_text">Explosives Atmospheres</string>
+    <string name="answer_1B_text">Carbon Monoxide</string>
+    <string name="answer_1C_text">H2S</string>
+
+    <string name="question_2_text">In case you should notice a dangerous situation, you have to:</string>
+    <string name="answer_2A_text">Quit the area as soon as you can</string>
+    <string name="answer_2B_text">Report the situation to your Supervisor</string>
+    <string name="answer_2C_text">Try to intervene personally to solve the situation</string>
+
+    <string name="question_3_text">Which of the following PPEs are mandatory in the areas marked with the yellow line on the ground?</string>
+
+    <string name="question_4_text">What\'s the internal number to dial in case of emergency?</string>
+
+    <string name="question_5_text">Where is the Assembly point located?</string>
+    <string name="spinner5a">Near the solvents storage</string>
+    <string name="spinner5b">In the parking area n. 2</string>
+    <string name="spinner5c">In front of the QC Lab</string>
+
+    <string name="question_6_text">What kind of dangerous substances are stored in the site?</string>
+
+    <!-- Feedback -->
+    <string name="user_company_name_missing">Please insert your name and company name</string>
+    <string name="submit">SUBMIT</string>
+
+
+    <string name="helmet_sign">Helmet Sign</string>
+    <string name="respirator_sign">Respirator sign</string>
+    <string name="safety_shoes_sign">Safety shoes sign</string>
+
+
+
+</resources>

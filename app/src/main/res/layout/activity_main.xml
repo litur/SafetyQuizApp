@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.quizapp.MainActivity">
+
+    <!-- Navigation Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/colorPrimaryLight"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            android:onClick="openMainMenu"
+            style="@style/navigationHeaderImageStyle"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/navigationHeaderStyle"
+            android:id="@+id/button_back"
+            android:text="QUIZ"
+            />
+
+    </LinearLayout>
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- parent vertical linear layout which contains everything inside the ScrollView-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            style="@style/myCardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/site_image" />
+
+                <TextView
+                    style="@style/instructionsTextStyle"
+                    android:text="Please insert your name and the organization you belong to and answer the following questions. Thanks for your cooperation. " />
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <!-- CardView for User Info -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            style="@style/myCardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/usernameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small_dimen"
+                    android:hint="@string/enter_your_name_here" />
+
+                <EditText
+                    android:id="@+id/companyNameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small_dimen"
+                    android:hint="@string/enter_company_name" />
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <!-- CardView for Question 1 - CheckBoxes -->
+        <android.support.v7.widget.CardView
+            style="@style/myCardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/questionsHeaderStyle"
+                    android:id="@+id/questionNumber1"
+                    android:text="1"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    style="@style/questionContainerStyle"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/questionsTextStyle"
+                        android:text="@string/question_1_text" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox1A"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_1A_text" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox1B"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_1B_text" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox1C"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_1C_text" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <!-- CardView for Question 2 - RadioButton -->
+        <android.support.v7.widget.CardView
+            style="@style/myCardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/questionsHeaderStyle"
+                    android:text="2"
+                    android:id="@+id/questionNumber2"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    style="@style/questionContainerStyle"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/questionsTextStyle"
+                        android:text="@string/question_2_text" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/radio_button_2A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/answer_2A_text" />
+
+                        <RadioButton
+                            android:id="@+id/radio_button_2B"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/answer_2B_text" />
+
+                        <RadioButton
+                            android:id="@+id/radio_button_2C"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/answer_2C_text" />
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <!-- CardView for Question 3 - CheckBoxes with Images-->
+        <android.support.v7.widget.CardView
+            style="@style/myCardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/questionsHeaderStyle"
+                    android:text="3"
+                    android:id="@+id/questionNumber3"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    style="@style/questionContainerStyle"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/questionsTextStyle"
+                        android:text="@string/question_3_text" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:id="@+id/checkbox3A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true" />
+
+                        <ImageView
+                            style="@style/quizImageStyle"
+                            android:layout_toEndOf="@id/checkbox3A"
+                            android:layout_toRightOf="@id/checkbox3A"
+                            android:src="@drawable/safety_shoes_sign"
+                            android:contentDescription="@string/safety_shoes_sign"/>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:id="@+id/checkbox3B"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true" />
+
+                        <ImageView
+                            style="@style/quizImageStyle"
+                            android:layout_toEndOf="@id/checkbox3B"
+                            android:layout_toRightOf="@id/checkbox3B"
+                            android:src="@drawable/helmet_sign"
+                            android:contentDescription="@string/helmet_sign"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:id="@+id/checkbox3C"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true" />
+
+                        <ImageView
+                            style="@style/quizImageStyle"
+                            android:layout_toEndOf="@id/checkbox3C"
+                            android:layout_toRightOf="@id/checkbox3C"
+                            android:src="@drawable/respirator_sign"
+                            android:contentDescription="@string/respirator_sign" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <!-- CardView for Question 4 - EditText -->
+        <android.support.v7.widget.CardView
+            style="@style/myCardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/questionsHeaderStyle"
+                    android:id="@+id/questionNumber4"
+                    android:text="4"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    style="@style/questionContainerStyle"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/questionsTextStyle"
+                        android:text="@string/question_4_text" />
+
+                    <EditText
+                        android:id="@+id/editText4a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/write_your_answer_here" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <!-- CardView for Question 5 - Spinner -->
+        <android.support.v7.widget.CardView
+            style="@style/myCardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/questionsHeaderStyle"
+                    android:id="@+id/questionNumber5"
+                    android:text="5"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    style="@style/questionContainerStyle"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/questionsTextStyle"
+                        android:text="@string/question_5_text"/>
+
+                    <Spinner
+                        android:id="@+id/spinner5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <!-- CardView for Question 6- CheckBoxes with Images and Text-->
+        <android.support.v7.widget.CardView
+            style="@style/myCardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/questionsHeaderStyle"
+                    android:text="6"
+                    android:id="@+id/questionNumber6"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    style="@style/questionContainerStyle"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/questionsTextStyle"
+                        android:text="@string/question_6_text" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:id="@+id/checkbox6A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true" />
+
+                        <ImageView
+                            style="@style/quizImageStyle"
+                            android:id="@+id/image6A"
+                            android:layout_toEndOf="@id/checkbox6A"
+                            android:layout_toRightOf="@id/checkbox6A"
+                            android:src="@drawable/ghs_02_highly_flammable"
+                            android:contentDescription="@string/safety_shoes_sign" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/image6A"
+                            android:layout_toRightOf="@id/image6A"
+                            android:text="Infiammabili"
+                            style="@style/quizImageLabelStyle"/>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:id="@+id/checkbox6B"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true" />
+
+                        <ImageView
+                            style="@style/quizImageStyle"
+                            android:id="@+id/image6B"
+                            android:layout_toEndOf="@id/checkbox6B"
+                            android:layout_toRightOf="@id/checkbox6B"
+                            android:src="@drawable/ghs_08_toxic"
+                            android:contentDescription="@string/helmet_sign" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/image6B"
+                            android:layout_toRightOf="@id/image6B"
+                            android:text="Cancerogene"
+                            style="@style/quizImageLabelStyle"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:id="@+id/checkbox6C"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true" />
+
+                        <ImageView
+                            style="@style/quizImageStyle"
+                            android:id="@+id/image6C"
+                            android:layout_toEndOf="@id/checkbox6C"
+                            android:layout_toRightOf="@id/checkbox6C"
+                            android:src="@drawable/ghs_06_highly_toxic"
+                            android:contentDescription="@string/respirator_sign" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/image6C"
+                            android:layout_toRightOf="@id/image6C"
+                            android:text="Molto tossiche per esposizione singola"
+                            style="@style/quizImageLabelStyle"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorPrimaryDark"
+            android:elevation="8dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_submit"
+                android:onClick="calculateScore"
+                android:text="@string/submit"
+                android:layout_alignParentLeft="true"
+                style="@style/ButtonStyle"
+                 />
+
+
+        </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

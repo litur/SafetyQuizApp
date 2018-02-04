@@ -1,0 +1,97 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/myPrimaryText</item>
+        <item name="android:textColorSecondary">@color/mySecondaryText</item>
+    </style>
+
+    <style name="myCardViewStyle" parent="CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/small_dimen</item>
+        <item name="android:layout_marginLeft">@dimen/medium_dimen</item>
+        <item name="android:layout_marginRight">@dimen/medium_dimen</item>
+        <item name="android:layout_marginTop">@dimen/small_dimen</item>
+    </style>
+
+    <style name="instructionsTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/medium_dimen</item>
+        <item name="android:layout_marginLeft">@dimen/medium_dimen</item>
+        <item name="android:layout_marginRight">@dimen/medium_dimen</item>
+        <item name="android:layout_marginTop">@dimen/medium_dimen</item>
+    </style>
+
+    <style name="questionsTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/small_dimen</item>
+        <item name="android:layout_marginLeft">@dimen/small_dimen</item>
+        <item name="android:layout_marginRight">@dimen/small_dimen</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+    <style name="questionsHeaderStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/small_dimen</item>
+        <item name="android:layout_marginLeft">@dimen/small_dimen</item>
+        <item name="android:layout_marginRight">@dimen/small_dimen</item>
+        <item name="android:layout_marginTop">@dimen/small_dimen</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/colorPrimaryLight</item>
+        <item name="android:background">@drawable/round_text_container</item>
+        <item name="android:padding">@dimen/xsmall_dimen</item>
+    </style>
+
+    <style name="questionContainerStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/small_dimen</item>
+    </style>
+
+    <style name="quizImageStyle">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_marginLeft">@dimen/medium_dimen</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Base.Widget.AppCompat.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_margin">@dimen/small_dimen</item>
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="quizImageLabelStyle">
+        <item name="android:paddingLeft">@dimen/medium_dimen</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="navigationHeaderStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:layout_marginLeft">@dimen/medium_dimen</item>
+    </style>
+
+    <style name="navigationHeaderImageStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginLeft">@dimen/small_dimen</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+</resources>

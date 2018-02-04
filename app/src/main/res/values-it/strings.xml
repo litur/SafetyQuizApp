@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="answer_1A_text">Atmosfere esplosive</string>
+    <string name="answer_1B_text">Monossido di Carbonio</string>
+    <string name="answer_1C_text">Idrogeno Solforato</string>
+    <string name="spinner5b">Nel parcheggio n. 2</string>
+    <string name="spinner5c">Di fronte al laboratorio Controllo Qualità</string>
+    <string name="spinner5a">Vicino all\'area deposito solventi</string>
+    <string name="question_1_text">Quali sono i principali pericoli presenti nelle aree delimitate dalla linea arancione?</string>
+    <string name="enter_your_name_here">Inserisci il tuo nome</string>
+    <string name="enter_company_name">Azienda</string>
+    <string name="user_company_name_missing">E\' necessario inserire il nome del visitatore e dell\'Azienda di appartenenza</string>
+    <string name="question_5_text">Dove si trova il punto di raccolta?</string>
+    <string name="submit">INVIA</string>
+    <string name="helmet_sign">Cartello Elmetto</string>
+    <string name="answer_2B_text">Segnalare la situazione al tuo Supervisore</string>
+    <string name="write_your_answer_here">Scrivi qui la risposta</string>
+    <string name="question_3_text">Quali dei seguenti DPI sono obbligatori nella aree delimitate dalla linea gialla?</string>
+    <string name="answer_2A_text">Abbandonare l\'area il prima possibile</string>
+    <string name="respirator_sign">Cartello respiratore</string>
+    <string name="safety_shoes_sign">Cartello scarpe di sicurezza</string>
+    <string name="question_2_text">In caso dovessi riscontrare una situazione anomala, devi:</string>
+    <string name="question_4_text">Qual è il numero interno da contattare in caso di emergenza?</string>
+    <string name="answer_2C_text">Intervenire in prima persona per risolvere la situazione</string>
+    <string name="question_6_text">Che tipo di sostanze pericolose sono presenti nel sito?</string>
+</resources>
