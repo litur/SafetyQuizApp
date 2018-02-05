@@ -392,14 +392,14 @@
                             android:layout_toEndOf="@id/checkbox6A"
                             android:layout_toRightOf="@id/checkbox6A"
                             android:src="@drawable/ghs_02_highly_flammable"
-                            android:contentDescription="@string/safety_shoes_sign" />
+                            android:contentDescription="@string/clp_pictogram_flammable" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toEndOf="@id/image6A"
                             android:layout_toRightOf="@id/image6A"
-                            android:text="Infiammabili"
+                            android:text="@string/flammable"
                             style="@style/quizImageLabelStyle"/>
 
                     </RelativeLayout>
@@ -421,14 +421,14 @@
                             android:layout_toEndOf="@id/checkbox6B"
                             android:layout_toRightOf="@id/checkbox6B"
                             android:src="@drawable/ghs_08_toxic"
-                            android:contentDescription="@string/helmet_sign" />
+                            android:contentDescription="@string/clp_pictogram_toxic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toEndOf="@id/image6B"
                             android:layout_toRightOf="@id/image6B"
-                            android:text="Cancerogene"
+                            android:text="@string/carcinogen"
                             style="@style/quizImageLabelStyle"/>
 
                     </RelativeLayout>
@@ -449,14 +449,14 @@
                             android:layout_toEndOf="@id/checkbox6C"
                             android:layout_toRightOf="@id/checkbox6C"
                             android:src="@drawable/ghs_06_highly_toxic"
-                            android:contentDescription="@string/respirator_sign" />
+                            android:contentDescription="@string/clp_pictogram_highly_toxic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toEndOf="@id/image6C"
                             android:layout_toRightOf="@id/image6C"
-                            android:text="Molto tossiche per esposizione singola"
+                            android:text="@string/very_toxic_on_single_exposure"
                             style="@style/quizImageLabelStyle"/>
 
                     </RelativeLayout>

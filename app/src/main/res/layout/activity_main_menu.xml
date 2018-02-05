@@ -24,13 +24,10 @@
             style="@style/navigationHeaderStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="SAFETY INDUCTION QUIZ" />
+            android:text="@string/main_menu_title" />
 
     </LinearLayout>
-
-
-
-
+    
         <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
@@ -55,10 +52,12 @@
                         android:layout_height="100dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/site_image" />
-
+                    <TextView
+                        style="@style/instructionsTextStyleHeader"
+                        android:text="@string/welcome_text1" />
                     <TextView
                         style="@style/instructionsTextStyle"
-                        android:text="Welcome to the Acme Site in Nowhere City. Every visitor of our site must be aware of some simple safety rules. We ask you to review these rules and answer the following questions. Thanks for your cooperation. " />
+                        android:text="@string/welcome_text2" />
                 </LinearLayout>
 
 

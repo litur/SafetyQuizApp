@@ -31,4 +31,12 @@
         "Complimenti <xliff:g id="name" example="James">%s </xliff:g>. Hai risposto bene a tutte le domande.\n
         Rivolgiti al tuo supervisore per ulteriori istruzioni"</string>
     <string name="negative_feedback_2">Controlla le domande con i numeri segnati in rosso e ripeti il questionario.</string>
+    <string name="flammable">Infiammabili</string>
+    <string name="carcinogen">Cancerogeni</string>
+    <string name="very_toxic_on_single_exposure">Molto Tossiche per esposizione singola</string>
+    <string name="please_insert_question">"Per favore, inserisci una risposta valida alla domanda "</string>
+    <string name="welcome_text1">Benvenuto nel sito Acme di Nowhere City</string>
+    <string name="clp_pictogram_toxic">Pittogramma CLP Tossico</string>
+    <string name="clp_pictogram_flammable">Pittogramma CLP Infiammabile</string>
+    <string name="clp_pictogram_highly_toxic">Pittogramma CLP Molto Tossico</string>
 </resources>

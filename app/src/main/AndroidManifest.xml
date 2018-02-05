@@ -18,7 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <!-- android:windowSoftInputMode="stateHidden" is to avoid the keyboard from opening automatically when the Activity is loaded-->
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden"
+            />
         <activity android:name=".safetyRules" />
         <activity android:name=".MainMenu"></activity>
     </application>

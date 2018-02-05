@@ -39,13 +39,13 @@
     <string name="btn_review_safety_rules">Review Safety Rules</string>
     <string name="btn_take_quiz">Take Quiz</string>
     <string name="safety_rules_text">Welcome to the Acme Site in Nowhere City.
-        Every visitor must be aware of some basic information on the site and of some simple rules for their own safety.\n
-        The site is classified at High risk because of the presence of large quantities of flammable, carcinogen and toxic substances. \n
-        In the areas marked with a yellow line on the ground the use of Safety shoes and helmet is mandatory. \n
-        In the areas marked with an orange line on the ground specific hazards related to Explosive Atmospheres and Hydrogen Sulfide (H2S) might be present. \n
-        In case you should notice some unusual event or a dangerous situation, please report it to your supervisor and follow his instructions.\n
-        In case you should not be able to alert your supervisor, dial the internal number 288 to report the emergency situation. \n
-        In case of an emergency, an alarm will sound. In this case reach the assembly point as soon as possible. The Assembly point is located in the parking area n.2 \n.
+        Every visitor must be aware of some basic information on the site and of some simple rules for their own safety.\n\n
+        The site is classified at High Risk because of the presence of large quantities of <u>flammable</u>, <u>carcinogen</u> and <u>toxic substances</u>.\n\n
+        In the areas marked with a yellow line on the ground the use of <u>Safety Shoes</u> and <u>Helmet</u> is mandatory.\n\n
+        In the areas marked with an orange line on the ground specific hazards related to <u>Explosive Atmospheres</u> and <u>Hydrogen Sulfide (H2S)</u> might be present. \n\n
+        In case you should notice an <u>unusual event or a dangerous situation</u>, please <u>report it to your supervisor</u> and follow his instructions.\n\n
+        In case you should not be able to alert your supervisor, dial the internal number <u>288</u> to report the emergency situation. \n\n
+        In case of an emergency, an alarm will sound. In this case reach the assembly point as soon as possible. The <u>Assembly point is located in the parking area n.2</u> \n.
 
     </string>
     <string name="please_insert_question">Please insert a valid answer for Question</string>
@@ -53,6 +53,16 @@
        Please refer to your supervisor fur further instructions."</string>
     <string name="negative_feedback_1">"<xliff:g id="name" example="James">%s </xliff:g>, you have correctly answered to <xliff:g id="num_answers" example="3">%s</xliff:g> questions. \n"</string>
     <string name="negative_feedback_2">Please, check the questions with the number marked in red.</string>
+    <string name="welcome_text1">Welcome to the Acme Site in Nowhere City</string>
+    <string name="welcome_text2">Every visitor of our site must be aware of some simple safety rules. We ask you to review these rules and answer the following questions. Thanks for your cooperation.</string>
+    <string name="flammable">Flammable</string>
+    <string name="carcinogen">Carcinogen</string>
+    <string name="clp_pictogram_toxic">CLP_pictogram_toxic</string>
+    <string name="clp_pictogram_highly_toxic">CLP_pictogram_highly_toxic</string>
+    <string name="very_toxic_on_single_exposure">Very Toxic on Single Exposure</string>
+    <string name="clp_pictogram_flammable">CLP_pictogram_flammable</string>
+    <string name="main_menu_title">SAFETY INDUCTION QUIZ</string>
+    <string name="safety_rules_title">SAFETY RULES</string>
 
 
 </resources>

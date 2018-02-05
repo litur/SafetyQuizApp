@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:background="@color/colorPrimaryLight"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        >
 
         <ImageView
             android:layout_width="wrap_content"
@@ -24,7 +25,8 @@
             android:layout_height="match_parent"
             style="@style/navigationHeaderStyle"
             android:id="@+id/button_back"
-            android:text="SAFETY RULES"
+            android:text="@string/safety_rules_title"
+
             />
 
     </LinearLayout>
@@ -50,7 +52,7 @@
                     android:src="@drawable/site_image" />
 
                 <TextView
-                    style="@style/instructionsTextStyle"
+                    style="@style/safetyRulesTextStyle"
                     android:text="@string/safety_rules_text" />
             </LinearLayout>
 
