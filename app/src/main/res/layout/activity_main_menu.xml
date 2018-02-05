@@ -75,14 +75,14 @@
                         style="@style/ButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Review Rules"
+                        android:text="@string/btn_review_safety_rules"
                         android:onClick="openSafetyRules"/>
 
                     <Button
                         style="@style/ButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Take QUIZ"
+                        android:text="@string/btn_take_quiz"
                         android:onClick="openQuizActivity"/>
                 </LinearLayout>
 

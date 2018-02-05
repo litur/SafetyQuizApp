@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">QuizApp</string>
     <string name="enter_your_name_here">Enter your name here</string>
 
@@ -10,7 +10,7 @@
     <string name="question_1_text">What are the main hazards you can find in the areas marked with the orange line on the ground?</string>
     <string name="answer_1A_text">Explosives Atmospheres</string>
     <string name="answer_1B_text">Carbon Monoxide</string>
-    <string name="answer_1C_text">H2S</string>
+    <string name="answer_1C_text">Hydrogen Sulfide (H2S)</string>
 
     <string name="question_2_text">In case you should notice a dangerous situation, you have to:</string>
     <string name="answer_2A_text">Quit the area as soon as you can</string>
@@ -36,7 +36,23 @@
     <string name="helmet_sign">Helmet Sign</string>
     <string name="respirator_sign">Respirator sign</string>
     <string name="safety_shoes_sign">Safety shoes sign</string>
+    <string name="btn_review_safety_rules">Review Safety Rules</string>
+    <string name="btn_take_quiz">Take Quiz</string>
+    <string name="safety_rules_text">Welcome to the Acme Site in Nowhere City.
+        Every visitor must be aware of some basic information on the site and of some simple rules for their own safety.\n
+        The site is classified at High risk because of the presence of large quantities of flammable, carcinogen and toxic substances. \n
+        In the areas marked with a yellow line on the ground the use of Safety shoes and helmet is mandatory. \n
+        In the areas marked with an orange line on the ground specific hazards related to Explosive Atmospheres and Hydrogen Sulfide (H2S) might be present. \n
+        In case you should notice some unusual event or a dangerous situation, please report it to your supervisor and follow his instructions.\n
+        In case you should not be able to alert your supervisor, dial the internal number 288 to report the emergency situation. \n
+        In case of an emergency, an alarm will sound. In this case reach the assembly point as soon as possible. The Assembly point is located in the parking area n.2 \n.
 
+    </string>
+    <string name="please_insert_question">Please insert a valid answer for Question</string>
+    <string name="positive_feedback">"Congratulations <xliff:g id="name" example="James">%s </xliff:g>. You have correctly answered to all the Questions. \n
+       Please refer to your supervisor fur further instructions."</string>
+    <string name="negative_feedback_1">"<xliff:g id="name" example="James">%s </xliff:g>, you have correctly answered to <xliff:g id="num_answers" example="3">%s</xliff:g> questions. \n"</string>
+    <string name="negative_feedback_2">Please, check the questions with the number marked in red.</string>
 
 
 </resources>

@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox myCheckbox1A;
     CheckBox myCheckbox1B;
     CheckBox myCheckbox1C;
+    RadioGroup myRadioGroup;
     RadioButton myRadioButton2A;
     RadioButton myRadioButton2B;
     RadioButton myRadioButton2C;
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         myCheckbox1B = findViewById(R.id.checkbox1B);
         myCheckbox1C = findViewById(R.id.checkbox1C);
 
+        myRadioGroup = findViewById(R.id.radio_group2);
         myRadioButton2A = findViewById(R.id.radio_button_2A);
         myRadioButton2B = findViewById(R.id.radio_button_2B);
         myRadioButton2C = findViewById(R.id.radio_button_2C);
@@ -96,19 +99,45 @@ public class MainActivity extends AppCompatActivity {
      */
     public void calculateScore(View view) {
         int score;
-        String scoreText;
 
         if (!checkUserData())
                 return;
 
+        if (checkAnswer1() == -1) {
+            showToast(getString(R.string.please_insert_question) + " 1");
+            return;
+        }
         score = checkAnswer1();
-        score += checkAnswer2();
-        score += checkAnswer3();
-        score += checkAnswer4();
-        score += checkAnswer5();
-        score += checkAnswer6();
 
-        scoreText = String.valueOf(score);
+        if (checkAnswer2() == -1) {
+            showToast(getString(R.string.please_insert_question) + " 2");
+            return;
+        }
+        score += checkAnswer2();
+
+        if (checkAnswer3() == -1) {
+            showToast(getString(R.string.please_insert_question) + " 3");
+            return;
+        }
+        score += checkAnswer3();
+
+        if (checkAnswer4() == -1) {
+            showToast(getString(R.string.please_insert_question) + " 4");
+            return;
+        }
+        score += checkAnswer4();
+
+        if (checkAnswer5() == -1) {
+            showToast(getString(R.string.please_insert_question) + " 5");
+            return;
+        }
+        score += checkAnswer5();
+
+        if (checkAnswer6() == -1) {
+            showToast(getString(R.string.please_insert_question) + " 6");
+            return;
+        }
+        score += checkAnswer6();
 
         showToast(createFeedback(score));
 
@@ -121,6 +150,11 @@ public class MainActivity extends AppCompatActivity {
      */
     private int checkAnswer1() {
         int score=0;
+
+        if (!myCheckbox1A.isChecked() && !myCheckbox1C.isChecked() && !myCheckbox1B.isChecked()) {
+            score = -1;
+            return score;
+        }
 
         if (myCheckbox1A.isChecked() && myCheckbox1C.isChecked() && !myCheckbox1B.isChecked())
             score = 1;
@@ -137,6 +171,13 @@ public class MainActivity extends AppCompatActivity {
     private int checkAnswer2() {
         int score=0;
 
+        if (myRadioGroup.getCheckedRadioButtonId() == -1)
+        {
+            // no radio buttons are checked
+            score = -1;
+            return score;
+        }
+        else
         if (myRadioButton2B.isChecked())
             score = 1;
 
@@ -151,6 +192,12 @@ public class MainActivity extends AppCompatActivity {
      */
     private int checkAnswer3() {
         int score=0;
+
+        if (!myCheckbox3A.isChecked() && !myCheckbox3B.isChecked() && !myCheckbox3C.isChecked()) {
+            score = -1;
+            return score;
+        }
+
 
         if (myCheckbox3A.isChecked() && myCheckbox3B.isChecked() && !myCheckbox3C.isChecked())
             score = 1;
@@ -167,6 +214,12 @@ public class MainActivity extends AppCompatActivity {
     private int checkAnswer4() {
         int score=0;
         String myAnswer = myEditText4a.getText().toString().trim();
+
+        if (myAnswer.equals("")) {
+            score = -1;
+            return score;
+        }
+
         if (myAnswer.equals(EMERGENCY_PHONE_NUMBER))
             score = 1;
 
@@ -184,7 +237,12 @@ public class MainActivity extends AppCompatActivity {
         int score = 0;
         int myAnswer =  mySpinner.getSelectedItemPosition();
 
-        if (myAnswer == 1)
+        if (myAnswer == 0) {
+            score = -1;
+            return score;
+        }
+
+        if (myAnswer == 2)
             score = 1;
 
         switchColor (myTextViewQ5, score);
@@ -198,6 +256,11 @@ public class MainActivity extends AppCompatActivity {
      */
     private int checkAnswer6() {
         int score=0;
+
+        if  (!myCheckbox6A.isChecked() && !myCheckbox6B.isChecked() && !myCheckbox6C.isChecked()) {
+            score = -1;
+            return score;
+        }
 
         if (myCheckbox6A.isChecked() && myCheckbox6B.isChecked() && myCheckbox6C.isChecked())
             score = 1;
@@ -214,12 +277,12 @@ public class MainActivity extends AppCompatActivity {
      */
     private String createFeedback(int score) {
         String feedback;
-
         if (score >= MIN_SCORE)
-            feedback = "Complimenti " + myUsernameInput.getText().toString() + ". Hai risposto bene a tutte le domande.";
-        else
-            feedback = myUsernameInput.getText().toString() + ", hai risposto bene a " + score + " domande.";
-            feedback = feedback + "Controlla le domande con i numeri segnati in rosso e ripeti il questionario.";
+            feedback= getString(R.string.positive_feedback, myUsernameInput.getText().toString());
+        else {
+            feedback = getString(R.string.negative_feedback_1, myUsernameInput.getText().toString(), String.valueOf(score));
+            feedback = feedback + getString(R.string.negative_feedback_2);
+        }
 
         return feedback;
 
@@ -246,7 +309,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void showToast(String toastMessage) {
         Context context = getApplicationContext();
-        int duration = Toast.LENGTH_SHORT;
+        int duration = Toast.LENGTH_LONG;
 
         Toast toast = Toast.makeText(context, toastMessage, duration);
         toast.show();

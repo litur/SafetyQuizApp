@@ -165,6 +165,7 @@
                         android:text="@string/question_2_text" />
 
                     <RadioGroup
+                        android:id="@+id/radio_group2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
@@ -466,23 +467,24 @@
         </android.support.v7.widget.CardView>
 
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:background="@color/colorPrimaryDark"
             android:elevation="8dp"
+            android:gravity="center_vertical"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/button_submit"
                 android:onClick="calculateScore"
                 android:text="@string/submit"
-                android:layout_alignParentLeft="true"
+
                 style="@style/ButtonStyle"
                  />
 
 
-        </RelativeLayout>
+        </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">QuizApp</string>
     <string name="answer_1A_text">Atmosfere esplosive</string>
     <string name="answer_1B_text">Monossido di Carbonio</string>
-    <string name="answer_1C_text">Idrogeno Solforato</string>
+    <string name="answer_1C_text">Idrogeno Solforato (H2S)</string>
     <string name="spinner5b">Nel parcheggio n. 2</string>
     <string name="spinner5c">Di fronte al laboratorio Controllo Qualità</string>
     <string name="spinner5a">Vicino all\'area deposito solventi</string>
@@ -24,4 +24,11 @@
     <string name="question_4_text">Qual è il numero interno da contattare in caso di emergenza?</string>
     <string name="answer_2C_text">Intervenire in prima persona per risolvere la situazione</string>
     <string name="question_6_text">Che tipo di sostanze pericolose sono presenti nel sito?</string>
+    <string name="btn_take_quiz">Compila il questionario</string>
+    <string name="btn_review_safety_rules">Ripassa le regole di sicurezza</string>
+
+    <string name="positive_feedback">
+        "Complimenti <xliff:g id="name" example="James">%s </xliff:g>. Hai risposto bene a tutte le domande.\n
+        Rivolgiti al tuo supervisore per ulteriori istruzioni"</string>
+    <string name="negative_feedback_2">Controlla le domande con i numeri segnati in rosso e ripeti il questionario.</string>
 </resources>

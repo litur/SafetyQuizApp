@@ -51,7 +51,7 @@
 
                 <TextView
                     style="@style/instructionsTextStyle"
-                    android:text="Welcome to the Acme Site in Nowhere City. Every visitor  must be aware of the basic information on our safety and some simple safety rules." />
+                    android:text="@string/safety_rules_text" />
             </LinearLayout>
 
 
