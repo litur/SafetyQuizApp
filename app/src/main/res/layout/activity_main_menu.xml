@@ -14,10 +14,10 @@
         android:gravity="center_vertical">
 
         <ImageView
+            style="@style/navigationHeaderImageStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_business_white_24dp"
-            style="@style/navigationHeaderImageStyle"/>
+            android:src="@drawable/ic_business_white_24dp" />
 
         <TextView
             android:id="@+id/button_back"
@@ -27,18 +27,18 @@
             android:text="@string/main_menu_title" />
 
     </LinearLayout>
-    
-        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- parent vertical linear layout which contains everything inside the ScrollView-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <!-- parent vertical linear layout which contains everything inside the ScrollView-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
 
             <android.support.v7.widget.CardView style="@style/myCardViewStyle">
 
@@ -52,9 +52,11 @@
                         android:layout_height="100dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/site_image" />
+
                     <TextView
                         style="@style/instructionsTextStyleHeader"
                         android:text="@string/welcome_text1" />
+
                     <TextView
                         style="@style/instructionsTextStyle"
                         android:text="@string/welcome_text2" />
@@ -74,21 +76,35 @@
                         style="@style/ButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/btn_review_safety_rules"
-                        android:onClick="openSafetyRules"/>
+                        android:onClick="openSafetyRules"
+                        android:text="@string/btn_review_safety_rules" />
 
                     <Button
                         style="@style/ButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/btn_take_quiz"
-                        android:onClick="openQuizActivity"/>
+                        android:onClick="openQuizActivity"
+                        android:text="@string/btn_take_quiz" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView style="@style/myCardViewStyle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/app_version_textview"
+                        style="@style/instructionsTextStyle"
+                        android:text="0" />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
         </LinearLayout>
-        </ScrollView>
-
+    </ScrollView>
 
 
 </LinearLayout>

@@ -1,42 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">QuizApp</string>
+
+    <!-- Questions and answers -->
+    <string name="question_1_text">Quali sono i principali pericoli presenti nelle aree delimitate dalla linea arancione?</string>
     <string name="answer_1A_text">Atmosfere esplosive</string>
     <string name="answer_1B_text">Monossido di Carbonio</string>
     <string name="answer_1C_text">Idrogeno Solforato (H2S)</string>
+    <string name="question_2_text">In caso dovessi riscontrare una situazione anomala, devi:</string>
+    <string name="answer_2A_text">Abbandonare l\'area il prima possibile</string>
+    <string name="answer_2B_text">Segnalare la situazione al tuo Supervisore</string>
+    <string name="answer_2C_text">Intervenire in prima persona per risolvere la situazione</string>
+    <string name="question_3_text">Quali dei seguenti DPI sono obbligatori nella aree delimitate dalla linea gialla?</string>
+    <string name="question_4_text">Qual è il numero interno da contattare in caso di emergenza?</string>
+    <string name="question_5_text">Dove si trova il punto di raccolta?</string>
+    <string name="spinner5a">Vicino all\'area deposito solventi</string>
     <string name="spinner5b">Nel parcheggio n. 2</string>
     <string name="spinner5c">Di fronte al laboratorio Controllo Qualità</string>
-    <string name="spinner5a">Vicino all\'area deposito solventi</string>
-    <string name="question_1_text">Quali sono i principali pericoli presenti nelle aree delimitate dalla linea arancione?</string>
+    <string name="question_6_text">Che tipo di sostanze pericolose sono presenti nel sito?</string>
+
+    <string name="submit">INVIA</string>
+    <string name="helmet_sign">Cartello Elmetto</string>
+    <string name="respirator_sign">Cartello respiratore</string>
+    <string name="safety_shoes_sign">Cartello scarpe di sicurezza</string>
+    <string name="write_your_answer_here">Scrivi qui la risposta</string>
+    <string name="btn_take_quiz">Compila il questionario</string>
+    <string name="btn_review_safety_rules">Ripassa le regole di sicurezza</string>
     <string name="enter_your_name_here">Inserisci il tuo nome</string>
     <string name="enter_company_name">Azienda</string>
     <string name="user_company_name_missing">E\' necessario inserire il nome del visitatore e dell\'Azienda di appartenenza</string>
-    <string name="question_5_text">Dove si trova il punto di raccolta?</string>
-    <string name="submit">INVIA</string>
-    <string name="helmet_sign">Cartello Elmetto</string>
-    <string name="answer_2B_text">Segnalare la situazione al tuo Supervisore</string>
-    <string name="write_your_answer_here">Scrivi qui la risposta</string>
-    <string name="question_3_text">Quali dei seguenti DPI sono obbligatori nella aree delimitate dalla linea gialla?</string>
-    <string name="answer_2A_text">Abbandonare l\'area il prima possibile</string>
-    <string name="respirator_sign">Cartello respiratore</string>
-    <string name="safety_shoes_sign">Cartello scarpe di sicurezza</string>
-    <string name="question_2_text">In caso dovessi riscontrare una situazione anomala, devi:</string>
-    <string name="question_4_text">Qual è il numero interno da contattare in caso di emergenza?</string>
-    <string name="answer_2C_text">Intervenire in prima persona per risolvere la situazione</string>
-    <string name="question_6_text">Che tipo di sostanze pericolose sono presenti nel sito?</string>
-    <string name="btn_take_quiz">Compila il questionario</string>
-    <string name="btn_review_safety_rules">Ripassa le regole di sicurezza</string>
-
     <string name="positive_feedback">
         "Complimenti <xliff:g id="name" example="James">%s </xliff:g>. Hai risposto bene a tutte le domande.\n
         Rivolgiti al tuo supervisore per ulteriori istruzioni"</string>
+    <string name="negative_feedback_1">"<xliff:g id="name" example="James">%s </xliff:g>, hai risposto correttamente a <xliff:g id="num_answers" example="3">%s</xliff:g> domande. \n"</string>
     <string name="negative_feedback_2">Controlla le domande con i numeri segnati in rosso e ripeti il questionario.</string>
     <string name="flammable">Infiammabili</string>
     <string name="carcinogen">Cancerogeni</string>
     <string name="very_toxic_on_single_exposure">Molto Tossiche per esposizione singola</string>
     <string name="please_insert_question">"Per favore, inserisci una risposta valida alla domanda "</string>
     <string name="welcome_text1">Benvenuto nel sito Acme di Nowhere City</string>
+    <string name="welcome_text2">Tutti gli ospiti del nostro sito devono essere consapevoli di alcune semplici regole di sicurezza. Ti chiediamo di ripassare queste regole e rispondere ad alcune semplici domande. Grazie per la collaborazione.</string>
+    <string name="safety_rules_text">Benvenuti al sito Acme di Nessun Posto.
+    Tutti gli ospiti del nostro sito devono essere consapevoli di alcune semplici regole di sicurezza.\n\n
+        Il sito è classificato a rischio di Incidente Rilevante per la presenza di elevate quantità di sostanze <u>infiammabili</u>, <u>cancerogene</u> e <u>tossiche</u>.\n\n
+        Nelle aree delimitate dalla linea gialla a terra è obbligatorio l\'uso di <u>Scarpe</u> e <u>Caschetto</u> di sicurezza.\n\n
+        Nelle aree delimitate dalla linea arancione a terra sono presenti dei rischi specifici legati a <u>Atmosgere esplosive</u> e <u>Idrogeno Solforato (H2S)</u>. \n\n
+        Nel caso dovessi riscontrare una <u>situazione anomala o pericolosa</u>, <u>segnalala al tuo supervisore</u> e attieniti alle indicazioni che ti darà.\n\n
+        In caso non riesca ad allertare il supervisore, comunica la situazione anomala al numero interno <u>288</u>. \n\n
+        Una sirena di allarme segnala le situazioni di emergenza. In tal caso recati senza indugio al punto di raccolta. Il <u>Punto di Raccolta si trova nell'\area di Parcheggio 2</u>. \n.
+    </string>
+
     <string name="clp_pictogram_toxic">Pittogramma CLP Tossico</string>
     <string name="clp_pictogram_flammable">Pittogramma CLP Infiammabile</string>
     <string name="clp_pictogram_highly_toxic">Pittogramma CLP Molto Tossico</string>
+    <string name="safety_rules_title">NORME DI SICUREZZA</string>
+    <string name="quiz_header">Inserisci il tuo nome e quello  della tua azienda/organizzazione e rispondi alle seguenti domande. Grazie.</string>
+
 </resources>

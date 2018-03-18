@@ -30,7 +30,6 @@
 
     </LinearLayout>
 
-
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -58,7 +57,7 @@
 
                 <TextView
                     style="@style/instructionsTextStyle"
-                    android:text="Please insert your name and the organization you belong to and answer the following questions. Thanks for your cooperation. " />
+                    android:text="@string/quiz_header" />
             </LinearLayout>
 
 

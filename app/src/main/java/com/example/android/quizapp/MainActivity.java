@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -16,6 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    public final static int MIN_SCORE = 6;
+    public final static String EMERGENCY_PHONE_NUMBER = "288";
     CheckBox myCheckbox1A;
     CheckBox myCheckbox1B;
     CheckBox myCheckbox1C;
@@ -33,17 +36,13 @@ public class MainActivity extends AppCompatActivity {
     CheckBox myCheckbox6A;
     CheckBox myCheckbox6B;
     CheckBox myCheckbox6C;
-
     TextView myTextViewQ1;
     TextView myTextViewQ2;
     TextView myTextViewQ3;
     TextView myTextViewQ4;
     TextView myTextViewQ5;
     TextView myTextViewQ6;
-
-
-    public static int MIN_SCORE = 6;
-    public static String EMERGENCY_PHONE_NUMBER = "288";
+    Button mySubmitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        myUsernameInput = findViewById (R.id.usernameInput);
-        myCompanynameInput = findViewById (R.id.companyNameInput);
+        myUsernameInput = findViewById(R.id.usernameInput);
+        myCompanynameInput = findViewById(R.id.companyNameInput);
 
         myCheckbox1A = findViewById(R.id.checkbox1A);
         myCheckbox1B = findViewById(R.id.checkbox1B);
@@ -82,17 +81,36 @@ public class MainActivity extends AppCompatActivity {
         myTextViewQ5 = findViewById(R.id.questionNumber5);
         myTextViewQ6 = findViewById(R.id.questionNumber6);
 
-        // Create an ArrayAdapter using the string array and a default spinner layout
+        mySubmitButton = findViewById(R.id.button_submit);
+
+        // Creates an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.question5_values, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
+        // Specifies the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
+        // Applies the adapter to the spinner
         mySpinner.setAdapter(adapter);
     }
 
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        // Always call the superclass so it can restore the view hierarchy
+        super.onRestoreInstanceState(savedInstanceState);
 
 
+        // Restore state members from saved instance
+        mySubmitButton.setVisibility(savedInstanceState.getInt("ButtonSubmitStatus"));
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save some infos to prevent them to be lost when the device switches between landscape and portrait
+        // TODO: find a way to save the resource used for the background of each answer number, because it gets resetted ig the user turns the device after the first completion of the quiz
+        savedInstanceState.putInt("ButtonSubmitStatus", mySubmitButton.getVisibility());
+
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
 
     /**
      * Calculates the total score for the Quiz
@@ -101,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         int score;
 
         if (!checkUserData())
-                return;
+            return;
 
         if (checkAnswer1() == -1) {
             showToast(getString(R.string.please_insert_question) + " 1");
@@ -138,154 +156,130 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         score += checkAnswer6();
-
         showToast(createFeedback(score));
-
-
     }
 
     /**
      * Calculates and returns the score for Question 1 (1 right, 0 wrong)
-     * If the answer is wrong, the label of the answer in marked in red to let the user know the wrong answers.
+     * If the answer is wrong, the label of the answer in marked in red to let the user know that the answer is wrong.
      */
     private int checkAnswer1() {
-        int score=0;
+        int score = 0;
 
         if (!myCheckbox1A.isChecked() && !myCheckbox1C.isChecked() && !myCheckbox1B.isChecked()) {
             score = -1;
             return score;
         }
-
         if (myCheckbox1A.isChecked() && myCheckbox1C.isChecked() && !myCheckbox1B.isChecked())
             score = 1;
-
-        switchColor (myTextViewQ1, score);
-
+        switchColor(myTextViewQ1, score);
         return score;
-
     }
 
     /**
-     * Calculates the score for Question 2
+     * Calculates and returns the score for Question 2 (1 right, 0 wrong)
+     * If the answer is wrong, the label of the answer in marked in red to let the user know that the answer is wrong.
      */
     private int checkAnswer2() {
-        int score=0;
+        int score = 0;
 
-        if (myRadioGroup.getCheckedRadioButtonId() == -1)
-        {
+        if (myRadioGroup.getCheckedRadioButtonId() == -1) {
             // no radio buttons are checked
             score = -1;
             return score;
-        }
-        else
-        if (myRadioButton2B.isChecked())
+        } else if (myRadioButton2B.isChecked())
             score = 1;
-
-        switchColor (myTextViewQ2, score);
-
+        switchColor(myTextViewQ2, score);
         return score;
-
     }
 
     /**
-     * Calculates the score for Question 3
+     * Calculates and returns the score for Question 3 (1 right, 0 wrong)
+     * If the answer is wrong, the label of the answer in marked in red to let the user know that the answer is wrong.
      */
     private int checkAnswer3() {
-        int score=0;
+        int score = 0;
 
         if (!myCheckbox3A.isChecked() && !myCheckbox3B.isChecked() && !myCheckbox3C.isChecked()) {
             score = -1;
             return score;
         }
-
-
         if (myCheckbox3A.isChecked() && myCheckbox3B.isChecked() && !myCheckbox3C.isChecked())
             score = 1;
-
-        switchColor (myTextViewQ3, score);
-
+        switchColor(myTextViewQ3, score);
         return score;
-
     }
 
     /**
-     * Calculates the score for Question 4
+     * Calculates and returns the score for Question 4 (1 right, 0 wrong)
+     * If the answer is wrong, the label of the answer in marked in red to let the user know that the answer is wrong.
      */
     private int checkAnswer4() {
-        int score=0;
-        String myAnswer = myEditText4a.getText().toString().trim();
+        int score = 0;
 
+        String myAnswer = myEditText4a.getText().toString().trim();
         if (myAnswer.equals("")) {
             score = -1;
             return score;
         }
-
         if (myAnswer.equals(EMERGENCY_PHONE_NUMBER))
             score = 1;
-
-        switchColor (myTextViewQ4, score);
-
+        switchColor(myTextViewQ4, score);
         return score;
-
     }
 
 
     /**
-     * Calculates the score for Question 5
+     * Calculates and returns the score for Question 5 (1 right, 0 wrong)
+     * If the answer is wrong, the label of the answer in marked in red to let the user know that the answer is wrong.
      */
     private int checkAnswer5() {
         int score = 0;
-        int myAnswer =  mySpinner.getSelectedItemPosition();
+        int myAnswer = mySpinner.getSelectedItemPosition();
 
         if (myAnswer == 0) {
             score = -1;
             return score;
         }
-
         if (myAnswer == 2)
             score = 1;
-
-        switchColor (myTextViewQ5, score);
-
+        switchColor(myTextViewQ5, score);
         return score;
-
     }
 
     /**
-     * Calculates the score for Question 6
+     * Calculates and returns the score for Question 6 (1 right, 0 wrong)
+     * If the answer is wrong, the label of the answer in marked in red to let the user know that the answer is wrong.
      */
     private int checkAnswer6() {
-        int score=0;
+        int score = 0;
 
-        if  (!myCheckbox6A.isChecked() && !myCheckbox6B.isChecked() && !myCheckbox6C.isChecked()) {
+        if (!myCheckbox6A.isChecked() && !myCheckbox6B.isChecked() && !myCheckbox6C.isChecked()) {
             score = -1;
             return score;
         }
-
         if (myCheckbox6A.isChecked() && myCheckbox6B.isChecked() && myCheckbox6C.isChecked())
             score = 1;
-
-        switchColor (myTextViewQ6, score);
-
+        switchColor(myTextViewQ6, score);
         return score;
-
     }
 
     /**
-     * Creates a feedback message
+     * Creates a feedback message to the user for the result of the Quiz
+     *
      * @param score The score calculated for the quiz
      */
     private String createFeedback(int score) {
         String feedback;
-        if (score >= MIN_SCORE)
-            feedback= getString(R.string.positive_feedback, myUsernameInput.getText().toString());
+        if (score >= MIN_SCORE) {
+            feedback = getString(R.string.positive_feedback, myUsernameInput.getText().toString());
+            mySubmitButton.setVisibility(View.INVISIBLE);
+        }
         else {
             feedback = getString(R.string.negative_feedback_1, myUsernameInput.getText().toString(), String.valueOf(score));
             feedback = feedback + getString(R.string.negative_feedback_2);
         }
-
         return feedback;
-
     }
 
     /**
@@ -294,17 +288,15 @@ public class MainActivity extends AppCompatActivity {
     private Boolean checkUserData() {
 
         if (myUsernameInput.getText().toString().isEmpty() || myCompanynameInput.getText().toString().isEmpty()) {
-
             showToast(getString(R.string.user_company_name_missing));
-
             return false;
         }
-
         return true;
-
     }
+
     /**
      * Displays the given Message in a toast
+     *
      * @param toastMessage the message (string) to be displayed by the toast
      */
     public void showToast(String toastMessage) {
@@ -318,19 +310,21 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Changes the color of the label of the question according to the score given to the answer
      * If the answer is wrong, the label of the answer in marked in red to let the user know the wrong answers.
-     * @param view it's the Textview to be modified
+     *
+     * @param view  it's the Textview to be modified
      * @param score the score given to the answer
      */
     private void switchColor(View view, int score) {
 
-        if ( score == 1)  {
+        if (score == 1) {
             view.setBackgroundResource(R.drawable.round_text_container);
-        }
-        else
+        } else
             view.setBackgroundResource(R.drawable.round_text_container_red);
     }
 
-    /** Called when the user taps the Back Arrow */
+    /**
+     * Called when the user taps the Back Arrow
+     */
     public void openMainMenu(View view) {
         Intent intent = new Intent(this, MainMenu.class);
         startActivity(intent);
