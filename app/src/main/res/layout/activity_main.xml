@@ -107,7 +107,8 @@
                     style="@style/questionsHeaderStyle"
                     android:id="@+id/questionNumber1"
                     android:text="1"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    tools:ignore="HardcodedText" />
 
                 <LinearLayout
                     style="@style/questionContainerStyle"
@@ -153,7 +154,8 @@
                     style="@style/questionsHeaderStyle"
                     android:text="2"
                     android:id="@+id/questionNumber2"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    tools:ignore="HardcodedText" />
 
                 <LinearLayout
                     style="@style/questionContainerStyle"
@@ -209,7 +211,8 @@
                     style="@style/questionsHeaderStyle"
                     android:text="3"
                     android:id="@+id/questionNumber3"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    tools:ignore="HardcodedText" />
 
                 <LinearLayout
                     style="@style/questionContainerStyle"
@@ -296,7 +299,8 @@
                     style="@style/questionsHeaderStyle"
                     android:id="@+id/questionNumber4"
                     android:text="4"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    tools:ignore="HardcodedText" />
 
                 <LinearLayout
                     style="@style/questionContainerStyle"
@@ -330,7 +334,8 @@
                     style="@style/questionsHeaderStyle"
                     android:id="@+id/questionNumber5"
                     android:text="5"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    tools:ignore="HardcodedText" />
 
                 <LinearLayout
                     style="@style/questionContainerStyle"
@@ -365,7 +370,8 @@
                     style="@style/questionsHeaderStyle"
                     android:text="6"
                     android:id="@+id/questionNumber6"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    tools:ignore="HardcodedText" />
 
                 <LinearLayout
                     style="@style/questionContainerStyle"

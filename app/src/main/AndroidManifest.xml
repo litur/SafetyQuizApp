@@ -24,7 +24,7 @@
             android:windowSoftInputMode="stateHidden"
             />
         <activity android:name=".safetyRules" />
-        <activity android:name=".MainMenu"></activity>
+        <activity android:name=".MainMenu"/>
     </application>
 
 </manifest>
