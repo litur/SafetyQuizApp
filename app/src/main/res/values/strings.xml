@@ -50,7 +50,7 @@
     </string>
     <string name="please_insert_question">Please insert a valid answer for Question</string>
     <string name="positive_feedback">"Congratulations <xliff:g id="name" example="James">%s </xliff:g>. You have correctly answered to all the Questions. \n
-       Please refer to your supervisor fur further instructions."</string>
+       Please refer to your supervisor for further instructions."</string>
     <string name="negative_feedback_1"><xliff:g id="name" example="James">%s </xliff:g>, you have correctly answered to <xliff:g id="num_answers" example="3">%s</xliff:g> questions. \n"</string>
     <string name="negative_feedback_2">Please, check the questions with the number marked in red.</string>
     <string name="welcome_text1">Welcome to the Acme Site in Nowhere City</string>
